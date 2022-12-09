@@ -1,4 +1,5 @@
 // Require all the packages
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -15,7 +16,8 @@ const app = express();
 
 // Connecting the monogDB with creating new db
 // mongoose.connect('mongodb://localhost:27017/postsDB');
-mongoose.connect(data.getUrl());
+
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_KEY}@dailyjournal.uqvpzzm.mongodb.net/postsDB`);
 
 // Set body parser and ejs
 app.set('view engine', 'ejs');
