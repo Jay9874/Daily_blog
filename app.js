@@ -6,7 +6,6 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const https = require('node:https');
 const mongoose = require('mongoose');
-const data = require(__dirname+'/secrets.js');
 
 
 
